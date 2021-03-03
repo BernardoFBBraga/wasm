@@ -9,7 +9,7 @@ CLANGFLAGS = \
 	-Wl,--lto-O3 \
 	-o
 target/lib.wasm: src/add.c src/sub.c
-	$(CLANG) $(CLANG) $@ $^
+	$(CLANG) $(CLANGFLAGS) $@ $^
 
 clean:
 	rm target/*.wasm
